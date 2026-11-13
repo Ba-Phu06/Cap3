@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanh Xuân Cấp 3 — Nơi Ký Ức Ở Lại</title>
+  <meta name="description" content="Lưu giữ những khoảnh khắc trong trẻo, rực rỡ và đáng nhớ nhất của tuổi học trò dưới mái trường cấp 3." />
+
+  <!-- Google Fonts: Be Vietnam Pro, Playfair Display, Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+
+  <!-- Scripts -->
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <!-- Header / Sticky Glassmorphism Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#hero" class="navbar-brand" aria-label="Trang chủ Thanh Xuân Cấp 3">
+        <span class="brand-icon" aria-hidden="true">🌸</span>
+        <span class="brand-text">Thanh Xuân <strong>Cấp 3</strong></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#hero" class="nav-link active">Trang đầu</a>
+        <a href="#memories" class="nav-link">Góc Ký Ức</a>
+        <a href="#timeline" class="nav-link">Hành Trình 3 Năm</a>
+        <a href="#yearbook" class="nav-link">Lưu Bút</a>
+      </nav>
+
+      <button type="button" id="ambient-toggle" class="ambient-btn" aria-pressed="false" title="Bật/tắt chế độ nắng chiều hoàng hôn">
+        <span class="ambient-icon" aria-hidden="true">☀️</span>
+        <span class="ambient-label">Nắng Chiều</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div id="petal-layer" class="petal-layer" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <span class="section-eyebrow">Niên khóa 2023 – 2026 • Ký ức tuổi 18</span>
+          <h1 class="hero-title">
+            Thanh Xuân Cấp 3 — <br />
+            <span class="hero-title-accent">Nơi Ký Ức Ở Lại</span>
+          </h1>
+          <p class="hero-subtitle">
+            Có một mùa hè chẳng bao giờ khép lại — nơi tiếng trống trường ngân dài dưới tán phượng đỏ, 
+            nơi tà áo dài trắng lướt qua hành lang ngập nắng và những ước mơ đầu đời được viết vội trên trang lưu bút.
+          </p>
+          <blockquote class="hero-quote handwritten">
+            “Chúng ta của năm 18 tuổi, chẳng có gì ngoài những ngày nắng đẹp và lời hứa sẽ mãi nhớ về nhau.”
+          </blockquote>
+          <div class="hero-actions">
+            <a href="#memories" class="btn btn-primary">Ngắm Góc Ký Ức</a>
+            <a href="#yearbook" class="btn btn-secondary">Viết Dòng Lưu Bút</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="hero-polaroid-stack">
+            <div class="hero-polaroid hero-polaroid-back">
+              <div class="hero-art hero-art-sky">
+                <svg viewBox="0 0 320 220" role="img" aria-label="Bầu trời sân trường">
+                  <defs>
+                    <linearGradient id="skyGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#4A90E2" />
+                      <stop offset="100%" stop-color="#9BC5F5" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="320" height="220" fill="url(#skyGrad)" rx="8" />
+                  <circle cx="255" cy="54" r="28" fill="#FFFDF7" opacity="0.9" />
+                  <path d="M0 165 Q95 140 180 165 T320 155 L320 220 L0 220 Z" fill="#FAF4E8" opacity="0.85" />
+                </svg>
+              </div>
+              <p class="handwritten">Hành lang ngập nắng...</p>
+            </div>
+
+            <div class="hero-polaroid hero-polaroid-front">
+              <div class="hero-art hero-art-sunset">
+                <svg viewBox="0 0 320 220" role="img" aria-label="Mùa hoa phượng đỏ">
+                  <defs>
+                    <linearGradient id="sunsetGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#E85D4A" />
+                      <stop offset="55%" stop-color="#F5B041" />
+                      <stop offset="100%" stop-color="#FFFDF7" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="320" height="220" fill="url(#sunsetGrad)" rx="8" />
+                  <circle cx="160" cy="115" r="42" fill="#FFFDF7" opacity="0.85" />
+                  <path d="M0 175 Q110 150 210 175 T320 165 L320 220 L0 220 Z" fill="#2C3038" opacity="0.18" />
+                  <circle cx="85" cy="65" r="6" fill="#E85D4A" />
+                  <circle cx="230" cy="75" r="5" fill="#E85D4A" />
+                  <circle cx="120" cy="48" r="4" fill="#FFFDF7" />
+                </svg>
+              </div>
+              <p class="handwritten">Mùa phượng vĩ cuối cùng • Khóa 12</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memories / Polaroid Gallery Section -->
+    <section id="memories" class="memories section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Lăng kính tuổi học trò</span>
+          <h2 class="section-title">Góc Ký Ức Thanh Xuân</h2>
+          <p class="section-subtitle">
+            Mỗi tấm hình Polaroid là một lát cắt dịu dàng của những năm tháng rực rỡ dưới mái trường mến yêu.
+          </p>
+        </div>
+
+        <div id="filter-buttons" class="filter-bar reveal" role="tablist" aria-label="Bộ lọc ký ức">
+          <button type="button" class="filter-btn active" data-category="all">Tất cả</button>
+          <button type="button" class="filter-btn" data-category="san-truong">Sân trường</button>
+          <button type="button" class="filter-btn" data-category="lop-hoc">Lớp học</button>
+          <button type="button" class="filter-btn" data-category="mua-he">Mùa hè</button>
+          <button type="button" class="filter-btn" data-category="le-hoi">Lễ hội</button>
+        </div>
+
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+          <!-- Populated dynamically by scripts/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Year High School Timeline Section -->
+    <section id="timeline" class="timeline section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">1000 ngày đáng nhớ</span>
+          <h2 class="section-title">Hành Trình 3 Năm Cấp 3</h2>
+          <p class="section-subtitle">
+            Từ buổi sáng tựu trường đầu tiên còn rụt rè đến ngày tiếng ve kêu báo hiệu mùa chia xa.
+          </p>
+        </div>
+
+        <ul id="timeline-list" class="timeline-list">
+          <!-- Populated dynamically by scripts/app.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Yearbook / Lưu Bút Section -->
+    <section id="yearbook" class="yearbook section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Trang vở còn thơm mùi giấy mới</span>
+          <h2 class="section-title">Góc Lưu Bút Tuổi 18</h2>
+          <p class="section-subtitle">
+            Gửi lại đôi dòng nhắn nhủ cho bạn bè, thầy cô và chính mình của những năm tháng thanh xuân tươi đẹp nhất.
+          </p>
+        </div>
+
+        <div class="yearbook-layout">
+          <form id="note-form" class="note-form reveal" novalidate>
+            <h3 class="form-title">Viết Lưu Bút Mới</h3>
+            <p class="form-desc">Lời nhắn của bạn sẽ được ghim ngay lên bảng lưu bút chung của lớp.</p>
+
+            <div class="form-group">
+              <label for="note-author">Tên của bạn <span aria-hidden="true">*</span></label>
+              <input type="text" id="note-author" name="author" placeholder="VD: Minh Anh, Cậu bạn bàn cuối..." maxlength="50" required />
+            </div>
+
+            <div class="form-group">
+              <label for="note-class">Lớp / Niên khóa <span aria-hidden="true">*</span></label>
+              <input type="text" id="note-class" name="className" placeholder="VD: 12A1 • 2023 - 2026" maxlength="40" required />
+            </div>
+
+            <div class="form-group">
+              <label for="note-message">Lời nhắn gửi thanh xuân <span aria-hidden="true">*</span></label>
+              <textarea id="note-message" name="message" rows="4" placeholder="Viết đôi dòng kỷ niệm hoặc lời chúc gửi tới bạn bè..." maxlength="280" required></textarea>
+            </div>
+
+            <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+
+            <button type="submit" class="btn btn-primary btn-full">Ghim Lên Bảng Lưu Bút</button>
+          </form>
+
+          <div class="notes-wall-wrapper">
+            <div id="notes-wall" class="notes-wall" aria-live="polite">
+              <!-- Populated dynamically by scripts/app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" id="lightbox-close" class="modal-close" aria-label="Đóng cửa sổ xem ảnh">&times;</button>
+      <div id="lightbox-image" class="lightbox-media"></div>
+      <div class="lightbox-body">
+        <div class="lightbox-meta">
+          <span id="lightbox-tag" class="polaroid-tag">Ký ức</span>
+          <span id="lightbox-date" class="lightbox-date"></span>
+        </div>
+        <h3 id="lightbox-title" class="lightbox-title">Tiêu đề ký ức</h3>
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon" aria-hidden="true">🌸</span>
+        <span class="brand-text">Thanh Xuân <strong>Cấp 3</strong> — Nơi Ký Ức Ở Lại</span>
+      </div>
+      <p class="footer-quote handwritten">
+        “Tạm biệt nhé những năm tháng rực rỡ nhất. Hẹn gặp lại nhau ở một tương lai thật hạnh phúc!”
+      </p>
+      <p class="footer-copy">
+        &copy; 2026 Lưu Bút Thanh Xuân Cấp 3. Thiết kế dành tặng những trái tim từng đi qua tuổi 18.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
